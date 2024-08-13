@@ -1,0 +1,415 @@
+/* Basic Styles */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    line-height: 1.6;
+    background-color: #f4f4f4;
+    color: #333;
+    transition: background-color 0.3s, color 0.3s;
+}
+
+/* Container */
+.container {
+    width: 80%;
+    max-width: 1200px;
+    margin: auto;
+    overflow: hidden;
+}
+
+/* Header */
+header {
+    background-color: #333;
+    color: #fff;
+    padding: 10px 0;
+    position: relative;
+}
+
+header .container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+header h1 {
+    font-size: 24px;
+}
+
+header nav ul {
+    list-style: none;
+    display: flex;
+}
+
+header nav ul li {
+    margin-left: 20px;
+}
+
+header nav ul li a {
+    color: #fff;
+    text-decoration: none;
+    font-weight: bold;
+    display: flex;
+    align-items: center;
+}
+
+header nav ul li a i {
+    margin-right: 8px;
+}
+
+.menu-toggle {
+    background: none;
+    border: none;
+    color: #fff;
+    font-size: 24px;
+    cursor: pointer;
+    display: none;
+}
+
+#toggle-dark-mode {
+    background: none;
+    border: none;
+    color: #fff;
+    font-size: 24px;
+    cursor: pointer;
+}
+
+/* Responsive NavBar */
+@media (max-width: 1200px) {
+    header .container {
+        flex-direction: column;
+    }
+
+    header nav {
+        display: none;
+        width: 100%;
+    }
+
+    header nav ul {
+        flex-direction: column;
+        align-items: center;
+        width: 100%;
+    }
+
+    header nav ul li {
+        margin: 10px 0;
+        width: 100%;
+        text-align: center;
+    }
+
+    header .menu-toggle {
+        display: block;
+    }
+
+    header nav ul {
+        display: none;
+    }
+}
+
+/* Hero Section */
+#hero {
+    background: url('hero-bg.jpg') no-repeat center center/cover;
+    height: 400px;
+    color: #000;
+    display: flex;
+    align-items: center;
+    text-align: center;
+}
+
+#hero .container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+#hero h2 {
+    font-size: 40px;
+    margin-bottom: 10px;
+}
+
+#hero p {
+    font-size: 20px;
+    margin-bottom: 20px;
+}
+
+#hero .btn {
+    background-color: #e8491d;
+    color: #fff;
+    padding: 10px 20px;
+    text-decoration: none;
+    border-radius: 5px;
+    transition: background-color 0.3s;
+}
+
+#hero .btn:hover {
+    background-color: #333;
+}
+
+/* Section Styles */
+section {
+    padding: 60px 0;
+}
+
+section h2 {
+    text-align: center;
+    margin-bottom: 40px;
+    font-size: 32px;
+}
+
+/* About Section */
+#about p {
+    text-align: center;
+    max-width: 600px;
+    margin: auto;
+    font-size: 18px;
+    line-height: 1.6;
+}
+
+/* Services Section */
+.serviceh2{
+  text-align: center;
+}
+#services {
+    display: flex;
+    justify-content: space-around;
+}
+
+.service {
+    text-align: center;
+    flex: 1;
+    margin: 0 15px;
+    padding: 20px;
+    background: #fff;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0,0,0,0.1);
+}
+
+.service h3 {
+    font-size: 24px;
+    margin-bottom: 15px;
+}
+
+.service p {
+    font-size: 16px;
+}
+
+/* Team Section */
+.teamh1{
+  text-align: center;
+}
+#team {
+    display: flex;
+    justify-content: space-around;
+}
+
+.team-card {
+    text-align: center;
+    flex: 1;
+    margin: 0 15px;
+    padding: 20px;
+    background: #fff;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0,0,0,0.1);
+}
+
+.team-card img {
+    border-radius: 50%;
+    width: 100px;
+    height: 100px;
+    object-fit: cover;
+    margin-bottom: 15px;
+}
+
+.team-card h3 {
+    font-size: 22px;
+    margin-bottom: 10px;
+}
+
+.team-card p {
+    font-size: 16px;
+}
+
+/* Portfolio Section */
+.portfolioh1{
+  text-align: center;
+}
+#portfolio {
+    display: flex;
+    justify-content: space-around;
+}
+
+.portfolio-item {
+    flex: 1;
+    margin: 0 15px;
+    padding: 20px;
+    background: #fff;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0,0,0,0.1);
+    text-align: center;
+}
+
+.portfolio-item h3 {
+    font-size: 24px;
+    margin-bottom: 15px;
+}
+
+.portfolio-item p {
+    font-size: 16px;
+}
+
+/* Testimonials Section */
+#testimonials {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.testimonial {
+    text-align: center;
+    max-width: 600px;
+    margin-bottom: 20px;
+    font-style: italic;
+    font-size: 18px;
+}
+
+/* FAQ Section */
+#faq {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.faq-item {
+    text-align: center;
+    max-width: 600px;
+    margin-bottom: 20px;
+}
+
+.faq-item h3 {
+    font-size: 22px;
+    margin-bottom: 10px;
+}
+
+/* Blog Section */
+.blogh1{
+  text-align: center;
+}
+#blog {
+    display: flex;
+    justify-content: space-around;
+}
+
+.blog-post {
+    flex: 1;
+    margin: 0 15px;
+    padding: 20px;
+    background: #fff;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0,0,0,0.1);
+    text-align: center;
+}
+
+.blog-post h3 {
+    font-size: 24px;
+    margin-bottom: 15px;
+}
+
+.blog-post p {
+    font-size: 16px;
+    margin-bottom: 15px;
+}
+
+.blog-post a {
+    color: #e8491d;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+.blog-post a:hover {
+    text-decoration: underline;
+}
+
+/* Contact Section */
+#contact {
+    text-align: center;
+}
+
+#contact form {
+    max-width: 600px;
+    margin: auto;
+    background: #fff;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0,0,0,0.1);
+}
+
+#contact label {
+    font-size: 16px;
+    margin-bottom: 10px;
+    display: block;
+}
+
+#contact input,
+#contact textarea {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 20px;
+    border-radius: 5px;
+    border: 1px solid #ddd;
+    font-size: 16px;
+}
+
+#contact button {
+    background-color: #e8491d;
+    color: #fff;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 16px;
+}
+
+#contact button:hover {
+    background-color: #333;
+}
+
+/* Footer */
+footer {
+    background-color: #333;
+    color: #fff;
+    text-align: center;
+    padding: 20px 0;
+}
+
+footer p {
+    margin: 0;
+}
+
+/* Dark Mode */
+.dark-mode {
+    background-color: #333;
+    color: #f4f4f4;
+}
+
+.dark-mode header {
+    background-color: #444;
+}
+
+.dark-mode .btn {
+    background: #444;
+}
+
+/* Media Queries */
+@media (max-width: 1200px) {
+    #services, #team, #portfolio, #blog {
+        flex-direction: column;
+    }
+
+    .service, .team-card, .portfolio-item, .blog-post {
+        margin: 15px 0;
+    }
+}
